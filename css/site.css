@@ -1,0 +1,69 @@
+﻿/* site.css */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1366px;
+    margin: 0;
+    padding: 0;
+}
+
+#aboutcontact {
+    background: #2d2e2d;
+    color: #b4b4b4;
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    margin: 0;
+    -moz-transition: top ease .25s;
+    -o-transition: top ease .25s;
+    -webkit-transition: top ease .25s;
+    transition: top ease .25s;
+}
+
+#aboutcontact.achide {
+    top: -120px;
+    -moz-transition: top ease .25s;
+    -o-transition: top ease .25s;
+    -webkit-transition: top ease .25s;
+    transition: top ease .25s;
+}
+
+#form {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 120px;
+    margin: 0;
+    -moz-transition: top ease .25s;
+    -o-transition: top ease .25s;
+    -webkit-transition: top ease .25s;
+    transition: top ease .25s;
+}
+
+#form.achide {
+    top: 0;
+    -moz-transition: top ease .25s;
+    -o-transition: top ease .25s;
+    -webkit-transition: top ease .25s;
+    transition: top ease .25s;
+}
+
+.content h4 {
+    color: #eb501b;
+}
+
+.content a {
+    color: #b4b4b4;
+}
+
+#connect {
+    color: #fff;
+    background-color: #eb501b;
+    width: 400px;
+}

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Connect to TESLA</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="aboutcontact" class="content achide">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-4">
+                    <div id="about">
+                        <h4>About</h4>
+                        <p>The TESLA Web web data connector connects to your Tesla<br />account to create a data extraction for your visualizations.<br />Created by Angsuman Ray</p>
+                    </div>
+                </div>
+                <div class="col-lg-offset-4 col-lg-2">
+                    <div id="contact">
+                        <h4>Contact</h4>
+                        <p>
+                            <a href="mailto:angsumanray@outlook.com">Email</a><br />
+                            <a href="http://twitter.com/angsu_r">Follow on Twitter</a><br />
+                            <a href="http://www.linkedin.com/in/angsu95">Connect on Linkedin</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="form" class="achide">
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-offset-4 col-lg-3">
+                        <button id="toggle" class="btn" style="margin-left: 20px; background-color: #fff;">&#9776;</button>
+                        <h4 style="float: right; margin-right: 20px;">TESLA web data connector</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-offset-4 col-lg-5">
+                        <h1 style="float: left; margin-left: 15px;">Connect to </h1>
+
+                        <img style="float: right; margin-right: 100px; margin-top: 25px;" src="images/tesla.png" height=30 />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-5">
+                    <div class="container-fluid">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Your login ID for Tesla" /><br />
+                            <input class="form-control" type="password" placeholder="Your Tesla password please?" /><br />
+                            <select class="form-control" id="selector">
+                                <option>- Select your Tesla vehicle -</option>
+                            </select><br />
+                            <div style="margin-left: 60px;"><button id="connect" class="btn btn-danger">Connect</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+
+</body>
+
+</html>
