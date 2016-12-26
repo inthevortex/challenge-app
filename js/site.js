@@ -3,7 +3,6 @@
 (site = function() {
 
     var request = new XMLHttpRequest();
-    var access_token, resp;
 
     populateList = function(response) {
         var resp = response,
@@ -16,7 +15,7 @@
         };
     };
 
-    getToken = function(callback) {
+    getToken = function() {
         request.open('POST', 'https://private-anon-5e477a5a98-timdorr.apiary-mock.com/oauth/token');
 
         request.onreadystatechange = function() {
@@ -24,16 +23,15 @@
                 console.log('Status:', this.status);
                 //console.log('Headers:', this.getAllResponseHeaders());
                 //console.log('Body:', this.responseText);
-                callback.call(this.responseText);
-                access_token = JSON.parse(this.responseText).access_token;
+                var access_token = JSON.parse(this.responseText).access_token;
             }
         };
 
         request.send();
-        getList();
+        return access_token;
     };
 
-    getList = function() {
+    getList = function(access_token) {
         request.open('GET', 'https://private-anon-5e477a5a98-timdorr.apiary-mock.com/api/1/vehicles');
 
         request.setRequestHeader('Authorization', `Bearer ${access_token}`);
@@ -43,13 +41,16 @@
                 console.log('Status:', this.status);
                 //console.log('Headers:', this.getAllResponseHeaders());
                 //console.log('Body:', this.responseText);
-                resp = JSON.parse(this.responseText).response;
-                populateList(resp);
+                var resp = JSON.parse(this.responseText).response;
             }
         };
-
         request.send();
+        return resp;
     };
+
+    var access_token = getToken();
+    var resp = getList(access_token);
+    populateList(resp);
 
     $("#selector").on("click", function() {
         getToken();
